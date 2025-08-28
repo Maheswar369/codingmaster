@@ -1,0 +1,173 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #866cfc, #928dab);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+.navbar .logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #eee;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #2dc0fa;
+  font-weight: 700;
+  border-bottom: 2px solid #2dc0fa;
+  padding-bottom: 3px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+}
+
+.hero h1 span {
+  color: #09cbfc;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  padding: 25px;
+  width: 280px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.card h2 {
+  color: #ffb347;
+  margin-bottom: 12px;
+}
+
+.card p {
+  color: #f1f1f1;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Contact Section */
+.Admincontainer {
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.Admincontainer h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.cardsMain {
+  display: flex;
+  justify-content: center;   /* center align */
+  gap: 25px;                 /* space between items */
+  flex-wrap: nowrap;         /* sob ek line e thakbe */
+  max-width: 100%;           /* pura width use korbe */
+}
+.cardAdmin {
+  flex: 1;
+  max-width: 150px;          /* sobar width fix rakha holo */
+}
+
+
+.cardAdmin i {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cardAdmin:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+/* Platform-specific colors */
+.cardAdmin:nth-child(1) i { color: #c23a2b; } /* Email */
+.cardAdmin:nth-child(2) i { color: #25D366; } /* WhatsApp */
+.cardAdmin:nth-child(3) i { color: #1877F2; } /* Facebook */
+.cardAdmin:nth-child(4) i { color: #E1306C; } /* Instagram */
+.cardAdmin:nth-child(5) i { color: #0088cc; } /* Telegram */
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.3);
+  font-size: 14px;
+  color: #eee;
+}

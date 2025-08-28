@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodingMaster - Video 1</title>
+  <link rel="stylesheet" href="card1.css">
+   <!-- ⬅️ নতুন CSS ফাইল যোগ -->
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="CodingMaster Logo" />
+      <span>CodingMaster</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="playlist.html">Playlist</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+
+   <!-- 1 vedio open -->
+  <main class="content">
+    <h2>1. Color Match Game using HTML, CSS & JavaScript | Rotating Box Game UI Design</h2>
+
+    <!-- YouTube Video -->
+    <div class="video-container">
+    <iframe width="740" height="415"
+          src="https://www.youtube.com/embed/7dsslRzWRIg"  
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+    </iframe>
+    </div>
+
+    <!-- Source Codes -->
+    <section class="source-code">
+      <h3>HTML Code</h3>
+      <div class="code-box" id="htmlCode1">
+        <textarea readonly>
+<!--
+          <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Match Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-wrapper">
+    <h1 class="title">🎯 Color Match</h1>
+    <h2 id="targetText">Click: </h2>
+
+    <div class="box-container">
+      <div class="box" data-color="red"></div>
+      <div class="box" data-color="blue"></div>
+      <div class="box" data-color="green"></div>
+      <div class="box" data-color="yellow"></div>
+    </div>
+
+    <div class="info">
+      <p>Score: <span id="score">0</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+<body>
+<html> 
+-->
+        </textarea>
+      </div>
+
+      <h3>CSS Code</h3>
+      <div class="code-box" id="cssCode1">
+        <textarea readonly>
+body {
+  margin: 0;
+  background: #0d0d0d;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-wrapper {
+  text-align: center;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,255,100,0.3);
+  width: 340px;
+}
+
+.title {
+  margin-bottom: 10px;
+  color: #00ff88;
+}
+
+#targetText {
+  font-size: 22px;
+  margin: 10px 0 50px;
+  color: #ffd700;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: 0 auto 20px;
+  animation: rotateGrid 8s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotateGrid {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.box:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 15px #fff;
+}
+
+.box[data-color="red"] { background: red; }
+.box[data-color="blue"] { background: blue; }
+.box[data-color="green"] { background: green; }
+.box[data-color="yellow"] { background: yellow; }
+
+.info {
+  margin-top: 50px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+        </textarea>
+      </div>
+
+      <h3>JavaScript Code</h3>
+      <div class="code-box" id="jsCode1">
+        <textarea readonly>
+<!--
+const colors = ["red", "blue", "green", "yellow"];
+const targetText = document.getElementById("targetText");
+const boxes = document.querySelectorAll(".box");
+const scoreDisplay = document.getElementById("score");
+
+let targetColor = "";
+let score = 0;
+
+function setNewTarget() {
+  targetColor = colors[Math.floor(Math.random() * colors.length)];
+  targetText.textContent = `Click: ${targetColor.toUpperCase()}`;
+}
+
+boxes.forEach(box => {
+  box.addEventListener("click", () => {
+    if (box.dataset.color === targetColor) {
+      score++;
+      scoreDisplay.textContent = score;
+      setNewTarget();
+    } else {
+      alert(`❌ Wrong! Final Score: ${score}`);
+      location.reload();
+    }
+  });
+});
+
+setNewTarget();
+
+-->   
+        </textarea>
+      </div>
+    </section>
+  </main>
+  <!-- 1 vedio close -->
+
+  <!-- 2 vedio open -->
+  <main class="content">
+    <h2>2. Drag & Drop Picture Puzzle Game using HTML, CSS & JavaScript | Fun Image Shuffle Project</h2>
+
+    <!-- YouTube Video -->
+    <div class="video-container">
+    <iframe width="740" height="415"
+          src="https://www.youtube.com/embed/nuP2eXnXIQ0"  
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+    </iframe>
+    </div>
+
+    <!-- Source Codes -->
+    <section class="source-code">
+      <h3>HTML Code</h3>
+      <div class="code-box" id="htmlCode2">
+        <textarea readonly>
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Drag & Drop Puzzle</title>
+</head>
+
+<body>
+    <h1>Drag & Drop Puzzle Game</h1>
+    <div class="bg"></div>
+
+    <div class="drag" id="drag">
+          <div class="dragbox">
+             <div class="images" id="block1" draggable="true" ondragstart="drag(event)" style="--img:url(r1-c1.jpg);"></div> 
+          </div>
+          <div class="dragbox">
+             <div class="images" id="block2" draggable="true" ondragstart="drag(event)" style="--img:url(r1-c2.jpg);"></div> 
+          </div>
+          <div class="dragbox">
+             <div class="images" id="block3" draggable="true" ondragstart="drag(event)" style="--img:url(r1-c3.jpg);"></div> 
+          </div>
+          <div class="dragbox">
+             <div class="images" id="block4" draggable="true" ondragstart="drag(event)" style="--img:url(r2-c1.jpg);"></div> 
+          </div>
+          <div class="dragbox">
+             <div class="images" id="block5" draggable="true" ondragstart="drag(event)" style="--img:url(r2-c2.jpg);"></div> 
+          </div>
+          <div class="dragbox">
+             <div class="images" id="block6" draggable="true" ondragstart="drag(event)" style="--img:url(r2-c3.jpg);"></div> 
+          </div>
+          <div class="dragbox">
+             <div class="images" id="block7" draggable="true" ondragstart="drag(event)" style="--img:url(r3-c1.jpg);"></div> 
+          </div>
+          <div class="dragbox">
+             <div class="images" id="block8" draggable="true" ondragstart="drag(event)" style="--img:url(r3-c2.jpg);"></div> 
+          </div>
+          <div class="dragbox">
+             <div class="images" id="block9" draggable="true" ondragstart="drag(event)" style="--img:url(r3-c3.jpg);"></div> 
+          </div>
+    </div>
+
+    <div class="drop">
+        <div class="dropbox" ondrop="drop(event)" ondragover="dropOver(event)"></div>
+        <div class="dropbox" ondrop="drop(event)" ondragover="dropOver(event)"></div>
+        <div class="dropbox" ondrop="drop(event)" ondragover="dropOver(event)"></div>
+        <div class="dropbox" ondrop="drop(event)" ondragover="dropOver(event)"></div>
+        <div class="dropbox" ondrop="drop(event)" ondragover="dropOver(event)"></div>
+        <div class="dropbox" ondrop="drop(event)" ondragover="dropOver(event)"></div>
+        <div class="dropbox" ondrop="drop(event)" ondragover="dropOver(event)"></div>
+        <div class="dropbox" ondrop="drop(event)" ondragover="dropOver(event)"></div>
+        <div class="dropbox" ondrop="drop(event)" ondragover="dropOver(event)"></div>
+
+    </div> 
+
+    <button id="reset" onclick="window.location.reload()">Reset Puzzle</button>
+
+    <script src="script.js"></script>
+<body>
+<html>
+-->
+        </textarea>
+      </div>
+
+      <h3>CSS Code</h3>
+      <div class="code-box" id="cssCode2">
+        <textarea readonly>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(bgimg.jpg);
+    background-size: 100% 100%;
+    position: relative;
+    gap: 150px;
+}
+
+.bg{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.286);
+    z-index: 2;
+}
+
+h1{
+    position: absolute;
+    top: 30px;
+    font-size: 50px;
+    color: #f8f8fa;
+    z-index: 3;
+    text-shadow: 2px 2px 10px #e9f547;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.drag{
+    position: relative;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    cursor: grab;
+    box-shadow: 2px 2px 10px #061e31;
+    z-index: 3;
+}
+
+.dragbox{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #35393c84;
+    box-shadow: 2px 2px 10px #061e31, -2px -2px 10px #63ccca;
+}
+
+.images{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--img);
+    background-size: cover;
+}
+
+.drop{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    box-shadow: 2x 2px 10px #061e31, -2px -2px 10px #63ccca;
+    z-index: 3;
+}
+
+.dropbox{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background-color: #061e3199;
+    box-shadow: 2px 2px 10px #061e31, -2px -2px 10px #05acb8;
+}
+
+#reset{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 400px;
+    transform: translateX(-50%);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #63ccca;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    box-shadow: 2px 2px 10x #061e31;
+    z-index: 3;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#reset:hover{
+    background-color: #061e31b5;
+    color: aliceblue;
+}
+        </textarea>
+      </div>
+
+      <h3>JavaScript Code</h3>
+      <div class="code-box" id="jsCode2">
+        <textarea readonly>
+       <!--
+    onload = function(){
+    let parent = document.getElementById("drag");
+    let frag = document.createDocumentFragment();
+    while(parent.children.length){
+        frag.appendChild(parent.children[Math.floor(Math.random() * parent.children.length)]);
+    }
+    parent.appendChild(frag);
+}
+
+function drag(event){
+    event.dataTransfer.setData("text",event.target.id);
+}
+
+function dropOver(event){
+    event.preventDefault();
+}
+
+function drop(event){
+    let data = event.dataTransfer.getData("text");
+    event.target.appendChild(document.getElementById(data));
+}
+      -->   
+        </textarea>
+      </div>
+    </section>
+  </main>
+  <!-- 2 vedio close -->
+
+  <!-- 3 vedio open -->
+  <main class="content">
+    <h2>3. Memory Flip Match Game using HTML, CSS & JavaScript | Fun Brain Puzzle for Beginners!</h2>
+
+    <!-- YouTube Video -->
+    <div class="video-container">
+    <iframe width="740" height="415"
+          src="https://www.youtube.com/embed/HsCJklUJYE8"   
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+    </iframe>
+    </div>
+
+    <!-- Source Codes -->
+    <section class="source-code">
+      <h3>HTML Code</h3>
+      <div class="code-box" id="htmlCode3">
+        <textarea readonly>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Match Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🧠 Memory Flip Game</h1>
+  <div class="game-board" id="gameBoard"></div>
+  <p id="moves">Moves: 0</p>
+  <script src="script.js"></script>
+<body>
+<html>
+
+-->
+        </textarea>
+      </div>
+
+      <h3>CSS Code</h3>
+      <div class="code-box" id="cssCode3">
+        <textarea readonly>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1a1a2e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 15px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #0f3460;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.card.flipped {
+  background-color: #e94560;
+  transform: rotateY(180deg);
+}
+
+        </textarea>
+      </div>
+
+      <h3>JavaScript Code</h3>
+      <div class="code-box" id="jsCode3">
+        <textarea readonly>
+     <!--
+const emojis = ['🍕','🍕','🚀','🚀','🎧','🎧','🧠','🧠','🎮','🎮','⚽','⚽','🌈','🌈','🎲','🎲'];
+let shuffled = emojis.sort(() => 0.5 - Math.random());
+
+const gameBoard = document.getElementById('gameBoard');
+let flippedCards = [];
+let matched = 0;
+let moves = 0;
+
+shuffled.forEach((emoji, index) => {
+  const card = document.createElement('div');
+  card.classList.add('card');
+  card.dataset.emoji = emoji;
+  card.dataset.index = index;
+  card.innerHTML = `<span style="display:none">${emoji}</span>`;
+  gameBoard.appendChild(card);
+});
+
+gameBoard.addEventListener('click', (e) => {
+  const card = e.target.closest('.card');
+  if (!card || card.classList.contains('flipped') || flippedCards.length === 2) return;
+
+  const emojiSpan = card.querySelector('span');
+  emojiSpan.style.display = 'block';
+  card.classList.add('flipped');
+  flippedCards.push(card);
+
+  if (flippedCards.length === 2) {
+    moves++;
+    document.getElementById('moves').innerText = `Moves: ${moves}`;
+
+    const [first, second] = flippedCards;
+    if (first.dataset.emoji === second.dataset.emoji) {
+      matched += 2;
+      flippedCards = [];
+      if (matched === emojis.length) {
+        setTimeout(() => {
+          alert(`🎉 You won in ${moves} moves!`);
+        }, 300);
+      }
+    } else {
+      setTimeout(() => {
+        flippedCards.forEach(card => {
+          card.classList.remove('flipped');
+          card.querySelector('span').style.display = 'none';
+        });
+        flippedCards = [];
+      }, 800);
+    }
+  }
+});
+
+      -->     
+        </textarea>
+      </div>
+    </section>
+  </main>
+  <!-- 3 vedio close -->
+
+  <!-- 4 vedio open -->
+  <main class="content">
+    <h2>4. Build Classic Tetris Game in JavaScript with Smooth Controls and Line Clear Feature</h2>
+
+    <!-- YouTube Video -->
+    <div class="video-container">
+    <iframe width="740" height="415"
+          src="https://www.youtube.com/embed/arvbPHwLYKU"  
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+    </iframe>
+    </div>
+
+    <!-- Source Codes -->
+    <section class="source-code">
+      <h3>HTML Code</h3>
+      <div class="code-box" id="htmlCode4">
+        <textarea readonly>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tetris Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tetris Game</h1>
+  <canvas id="tetris" width="240" height="400"></canvas>
+  <p>🎮 Controls: ⬅️ ➡️ Move | ⬆️ Rotate | ⬇️ Drop</p>
+  <script src="script.js"></script>
+<body>
+<html>
+-->
+        </textarea>
+      </div>
+
+      <h3>CSS Code</h3>
+      <div class="code-box" id="cssCode4">
+        <textarea readonly>
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+  margin-bottom: 10px;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff6, 0 0 20px #f06; }
+  to { text-shadow: 0 0 20px #0ff, 0 0 30px #06f; }
+}
+
+canvas {
+  border: 3px solid white;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 20px cyan;
+}
+
+        </textarea>
+      </div>
+
+      <h3>JavaScript Code</h3>
+      <div class="code-box" id="jsCode4">
+        <textarea readonly>
+         <!--
+const canvas = document.getElementById('tetris');
+const context = canvas.getContext('2d');
+context.scale(20, 20);
+
+function arenaSweep() {
+    let rowCount = 1;
+    outer: for (let y = arena.length -1; y >= 0; --y) {
+        for (let x = 0; x < arena[y].length; ++x) {
+            if (arena[y][x] === 0) {
+                continue outer;
+            }
+        }
+        const row = arena.splice(y, 1)[0].fill(0);
+        arena.unshift(row);
+        ++y;
+    }
+}
+
+function collide(arena, player) {
+    const m = player.matrix;
+    const o = player.pos;
+    for (let y = 0; y < m.length; ++y) {
+        for (let x = 0; x < m[y].length; ++x) {
+            if (m[y][x] !== 0 &&
+               (arena[y + o.y] &&
+                arena[y + o.y][x + o.x]) !== 0) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function createMatrix(w, h) {
+    const matrix = [];
+    while (h--) {
+        matrix.push(new Array(w).fill(0));
+    }
+    return matrix;
+}
+
+function createPiece(type) {
+    if (type === 'T') {
+        return [
+            [0, 0, 0],
+            [1, 1, 1],
+            [0, 1, 0],
+        ];
+    } else if (type === 'O') {
+        return [
+            [2, 2],
+            [2, 2],
+        ];
+    } else if (type === 'L') {
+        return [
+            [0, 3, 0],
+            [0, 3, 0],
+            [0, 3, 3],
+        ];
+    } else if (type === 'J') {
+        return [
+            [0, 4, 0],
+            [0, 4, 0],
+            [4, 4, 0],
+        ];
+    } else if (type === 'I') {
+        return [
+            [0, 5, 0, 0],
+            [0, 5, 0, 0],
+            [0, 5, 0, 0],
+            [0, 5, 0, 0],
+        ];
+    } else if (type === 'S') {
+        return [
+            [0, 6, 6],
+            [6, 6, 0],
+            [0, 0, 0],
+        ];
+    } else if (type === 'Z') {
+        return [
+            [7, 7, 0],
+            [0, 7, 7],
+            [0, 0, 0],
+        ];
+    }
+}
+
+function drawMatrix(matrix, offset) {
+    matrix.forEach((row, y) => {
+        row.forEach((value, x) => {
+            if (value !== 0) {
+                context.fillStyle = colors[value];
+                context.fillRect(x + offset.x, y + offset.y, 1, 1);
+            }
+        });
+    });
+}
+
+function draw() {
+    context.fillStyle = '#000';
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    drawMatrix(arena, {x:0, y:0});
+    drawMatrix(player.matrix, player.pos);
+}
+
+function merge(arena, player) {
+    player.matrix.forEach((row, y) => {
+        row.forEach((value, x) => {
+            if (value !== 0) {
+                arena[y + player.pos.y][x + player.pos.x] = value;
+            }
+        });
+    });
+}
+
+function playerDrop() {
+    player.pos.y++;
+    if (collide(arena, player)) {
+        player.pos.y--;
+        merge(arena, player);
+        playerReset();
+        arenaSweep();
+    }
+    dropCounter = 0;
+}
+
+function playerMove(dir) {
+    player.pos.x += dir;
+    if (collide(arena, player)) {
+        player.pos.x -= dir;
+    }
+}
+
+function playerReset() {
+    const pieces = 'TJLOSZI';
+    player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
+    player.pos.y = 0;
+    player.pos.x = (arena[0].length / 2 | 0) -
+                   (player.matrix[0].length / 2 | 0);
+    if (collide(arena, player)) {
+        arena.forEach(row => row.fill(0));
+    }
+}
+
+function playerRotate(dir) {
+    const pos = player.pos.x;
+    let offset = 1;
+    rotate(player.matrix, dir);
+    while (collide(arena, player)) {
+        player.pos.x += offset;
+        offset = -(offset + (offset > 0 ? 1 : -1));
+        if (offset > player.matrix[0].length) {
+            rotate(player.matrix, -dir);
+            player.pos.x = pos;
+            return;
+        }
+    }
+}
+
+function rotate(matrix, dir) {
+    for (let y = 0; y < matrix.length; ++y) {
+        for (let x = 0; x < y; ++x) {
+            [
+                matrix[x][y],
+                matrix[y][x],
+            ] = [
+                matrix[y][x],
+                matrix[x][y],
+            ];
+        }
+    }
+    if (dir > 0) {
+        matrix.forEach(row => row.reverse());
+    } else {
+        matrix.reverse();
+    }
+}
+
+let dropCounter = 0;
+let dropInterval = 1000;
+
+let lastTime = 0;
+function update(time = 0) {
+    const deltaTime = time - lastTime;
+    lastTime = time;
+
+    dropCounter += deltaTime;
+    if (dropCounter > dropInterval) {
+        playerDrop();
+    }
+
+    draw();
+    requestAnimationFrame(update);
+}
+
+const colors = [
+    null,
+    'purple',
+    'yellow',
+    'orange',
+    'blue',
+    'cyan',
+    'green',
+    'red',
+];
+
+const arena = createMatrix(12, 20);
+
+const player = {
+    pos: {x:0, y:0},
+    matrix: null,
+};
+
+document.addEventListener('keydown', event => {
+    if (event.keyCode === 37) {
+        playerMove(-1);
+    } else if (event.keyCode === 39) {
+        playerMove(1);
+    } else if (event.keyCode === 40) {
+        playerDrop();
+    } else if (event.keyCode === 38) {
+        playerRotate(1);
+    }
+});
+
+playerReset();
+update();
+
+          --> 
+        </textarea>
+      </div>
+    </section>
+  </main>
+  <!-- 4 vedio close -->
+
+  <!-- 5 vedio open -->
+  <main class="content">
+    <h2>5. Balloon Shooting Game | Easy Web Game with HTML, CSS & JS || Pop Balloons & Have Fun!</h2>
+
+    <!-- YouTube Video -->
+    <div class="video-container">
+    <iframe width="740" height="415"
+          src="https://www.youtube.com/embed/T58Y74gGyrM"   
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+    </iframe>
+    </div>
+
+    <!-- Source Codes -->
+    <section class="source-code">
+      <h3>HTML Code</h3>
+      <div class="code-box" id="htmlCode5">
+        <textarea readonly>
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Balloon Shooting Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="gameCanvas"></canvas>
+  <script src="script.js"></script>
+<body>
+<html>
+-->
+        </textarea>
+      </div>
+
+      <h3>CSS Code</h3>
+      <div class="code-box" id="cssCode5">
+        <textarea readonly>
+body {
+  margin: 0;
+  overflow: hidden;
+  background: skyblue;
+}
+#gameCanvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+        </textarea>
+      </div>
+
+      <h3>JavaScript Code</h3>
+      <div class="code-box" id="jsCode5">
+        <textarea readonly>
+    <!--
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+const balloonImgs = ["b1.png","b2.png","b3.png","b4.png","b5.png","b6.png"].map(src=>{
+  const img = new Image(); img.src = src; return img;
+});
+const arrowImg = new Image();
+arrowImg.src = "arrow.png";
+
+let balloons = [], arrows = [];
+
+function spawnBalloon() {
+  const img = balloonImgs[Math.floor(Math.random()*balloonImgs.length)];
+  balloons.push({
+    x: Math.random()*(canvas.width-50),
+    y: canvas.height,
+    w: 150, h: 170,
+    img: img,
+    speed: 2+Math.random()*2
+  });
+}
+setInterval(spawnBalloon, 1500);
+
+window.addEventListener("click", e=>{
+  arrows.push({x: e.clientX-25, y: canvas.height-100, w:50, h:120, speed:7});
+});
+
+function gameLoop() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  balloons.forEach((b,i)=>{
+    b.y -= b.speed;
+    ctx.drawImage(b.img,b.x,b.y,b.w,b.h);
+    if(b.y+b.h<0) balloons.splice(i,1);
+  });
+
+  arrows.forEach((a,i)=>{
+    a.y -= a.speed;
+    ctx.drawImage(arrowImg,a.x,a.y,a.w,a.h);
+    if(a.y+a.h<0) arrows.splice(i,1);
+
+    balloons.forEach((b,bi)=>{
+      if(a.x<a.w+b.x && a.x+a.w>b.x && a.y<a.h+b.y && a.y+a.h>b.y){
+        balloons.splice(bi,1);
+        arrows.splice(i,1);
+      }
+    });
+  });
+
+  requestAnimationFrame(gameLoop);
+}
+gameLoop();
+    -->      
+        </textarea>
+      </div>
+    </section>
+  </main>
+  <!-- 5 vedio close -->
+
+  <!-- 0 vedio open -->
+  <main class="content">
+    <h2>0. xxxx xxxx xxxxxx x xxx x xx xxxxxxx   x xxxxxx  x xxxxxxxx</h2>
+
+    <!-- YouTube Video -->
+    <div class="video-container">
+    <iframe width="740" height="415"
+          src="https://www.youtube.com/embed/"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+    </iframe>
+    </div>
+
+    <!-- Source Codes -->
+    <section class="source-code">
+      <h3>HTML Code</h3>
+      <div class="code-box" id="htmlCode1">
+        <textarea readonly>
+
+        </textarea>
+      </div>
+
+      <h3>CSS Code</h3>
+      <div class="code-box" id="cssCode1">
+        <textarea readonly>
+
+        </textarea>
+      </div>
+
+      <h3>JavaScript Code</h3>
+      <div class="code-box" id="jsCode1">
+        <textarea readonly>
+          
+        </textarea>
+      </div>
+    </section>
+  </main>
+  <!-- 0 vedio close -->
+
+
+
+
+
+
+  <footer>
+    <p>© 2025 CodingMaster. Learn Share.</p>
+  </footer>
+
+
+</body>
+</html>

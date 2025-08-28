@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodingMaster - Video 1</title>
+  <link rel="stylesheet" href="card1.css">
+   <!-- ⬅️ নতুন CSS ফাইল যোগ -->
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.png" alt="CodingMaster Logo" />
+      <span>CodingMaster</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="playlist.html">Playlist</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+
+  <!-- 1 vedio open -->
+  <main class="content">
+    <h2>1. Login & Register Ui Design || Animated replace Login and Register page || Fontside devloped.</h2>
+
+    <!-- YouTube Video -->
+    <div class="video-container">
+    <iframe width="740" height="415"
+          src="https://www.youtube.com/embed/XYIrr_Vmc1M"  
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+    </iframe>
+    </div>
+
+    <!-- Source Codes -->
+    <section class="source-code">
+      <h3>HTML Code</h3>
+      <div class="code-box" id="htmlCode1">
+        <textarea readonly>
+          <!--
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Login Register</title>
+</head>
+
+<body>
+    <div class="bubbles">
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+    </div>
+
+    <div class="container" id="container">
+         
+        <div class="form-container sign-up">
+               <form>
+                   <h1>Create Account?</h1>
+                   <div class="social-icons">
+                       <a href="#" class="icon google"><i class="fab fa-google"></i></a>
+                       <a href="#" class="icon apple"><i class="fab fa-apple"></i></a>
+                       <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                       <a href="#" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                   </div>
+                   <span>Or use your email for Registration</span>
+                   <input type="text" placeholder="Name">
+                   <input type="email" placeholder="Email">
+                   <input type="password" placeholder="Password">
+                   <button>Sign Up</button>
+               </form>
+          </div>
+
+          <div class="form-container sign-in">
+               <form>
+                   <h1>Sign In</h1>
+                   <div class="social-icons">
+                       <a href="#" class="icon google"><i class="fab fa-google"></i></a>
+                       <a href="#" class="icon apple"><i class="fab fa-apple"></i></a>
+                       <a href="#" class="icon twitter"><i class="fab fa-twitter"></i></a>
+                       <a href="#" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                   </div>
+                   <span>Or use your email password</span>                   
+                   <input type="email" placeholder="Email">
+                   <input type="password" placeholder="Password">
+                   <a href="#">Forgot Your Password</a>
+                   <button>Sign In</button>
+               </form>
+          </div>
+
+          <div class="toggle-container">
+              <div class="toggle">
+
+                  <div class="toggle-panel  toggle-left">
+                       <h1>Welcome Back!</h1>
+                       <p>Enter your personal details to access this</p>
+                       <button class="hidden" id="login">Sign In</button>
+                  </div>
+
+                  <div class="toggle-panel  toggle-right">
+                       <h1>New Here?</h1>
+                       <p>Register your personal details to get started</p>
+                       <button class="hidden" id="register">Sign Up</button>
+                  </div>
+
+              </div>
+          </div>
+
+    </div>
+
+<script src="script.js"></script>
+<body>
+<html>
+          -->
+        </textarea>
+      </div>
+
+      <h3>CSS Code</h3>
+      <div class="code-box" id="cssCode1">
+        <textarea readonly>
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.container{
+    background: rgba(225, 225, 225, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(225, 225, 225, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    width: 850px;
+    max-width: 100%;
+    min-height: 550px;
+    color: #ffffff;
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active{
+    background: #dadce0;
+    border: none;
+    box-shadow: 0  4px  20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px  0;
+    color: #ffffff;
+}
+
+.container.active p{
+    color: #f4f5f9;
+}
+
+.container span{
+    font-size: 12px;
+    color: rgba(225, 225, 225, 0.7);
+}
+
+.container.active span{
+    color: #16213e;
+}
+
+.container a{
+    color: rgba(225, 225, 225, 0.7);
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+    transition: all 0.3s ease;
+}
+
+.container.active a{
+    color: #16213e;
+}
+
+.container a:hover{
+    color: #00ddeb;
+    text-decoration: underline;
+}
+
+.container button{
+    background: linear-gradient(45deg, #4b0082 0%,  #00ddeb 100%);
+    color: #ffffff;
+    font-size: 14px;
+    padding: 12px 45px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 221, 235, 0.3);
+}
+
+.container.active button{
+    color: #f7f8f9;
+}
+
+.container button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 221, 235, 0.5);
+    background: linear-gradient(45deg, #00ddeb 0%, #4b0082 100%);
+}
+
+.container button.hidden{
+    background: transparent;
+    border: 2px solid #ffffff;
+    box-shadow: none;
+}
+
+.container.active button.hidden{
+    border-color: #d9dce2;
+    color: #f6f4f4;
+}
+
+.container button.hidden:hover{
+    background: rgba(0, 221, 235, 0.2);
+}
+
+.container form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+}
+
+.container input{
+    background: rgba(225, 225, 225, 0.15);
+    border: none;
+    margin: 10px 0;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 50px;
+    width: 100%;
+    outline: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.container.active  input{
+     background: #ffffff;
+     color: #16213e;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container input::placeholder{
+    color: rgba(225, 225, 225, 0.7);
+}
+
+
+.container.active  input::placeholder{
+    color: #404144;
+}
+
+.container input:focus{
+    box-shadow: 0 0 0 2px #00ddeb;
+}
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+    opacity: 1;
+}
+
+.container.active .sign-in{
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 1;
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{opacity: 0; z-index: 1;}
+    50%, 100%{opacity: 1; z-index: 5;}
+}
+
+.social-icons{
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.social-icons a.google{
+    background: #db4437;
+}
+
+.social-icons a.apple{
+    background: #067e4c;
+}
+
+.social-icons a.twitter{
+    background: #1da1f2;
+}
+
+.social-icons a.linkedin{
+    background: #0a66c2;
+}
+
+.social-icons a:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 221, 235, 0.5);
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    height: 100%;
+    background: linear-gradient(to right, #4b0082, #00ddeb);
+    color: #fcfafa;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
+
+h1{
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #fdfcfc;
+}
+
+.container.active h1{
+    color: #9e9090;
+}
+
+.bubbles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.bubble{
+    position: absolute;
+    bottom: -100px;
+    background: rgba(0, 221, 235, 0.3);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+}
+
+.bubble:nth-child(odd){
+    background: rgba(225, 46, 99, 0.3);
+}
+
+.bubble:nth-child(1){
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.bubble:nth-child(2){
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(3){
+    width: 50px;
+    height: 50px;
+    left: 35%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(4){
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    animation-duration: 11s;
+    animation-delay: 0s;
+}
+
+.bubble:nth-child(5){
+    width: 35px;
+    height: 35px;
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(6){
+    width: 45px;
+    height: 45px;
+    left: 65%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(7){
+    width: 25px;
+    height: 25px;
+    left: 75%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(8){
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+@keyframes rise{
+    0%{bottom: -100px; transform: translateX(0);}
+    50%{transform: translateX(100px);}
+    100%{bottom: 1080px; transform: translateX(-200px);}
+}
+
+
+        </textarea>
+      </div>
+
+      <h3>JavaScript Code</h3>
+      <div class="code-box" id="jsCode1">
+        <textarea readonly>
+          <!--
+   const container = document.getElementById('container');
+   const registerBtn = document.getElementById('register');
+   const loginBtn = document.getElementById('login');
+
+   registerBtn.addEventListener('click', () => {
+      container.classList.add("active");
+   });
+
+   loginBtn.addEventListener('click', () => {
+      container.classList.remove("active");
+   });
+          -->
+        </textarea>
+      </div>
+    </section>
+  </main>
+  <!-- 1 vedio close -->
+
+   <!-- 2 vedio open -->
+  <main class="content">
+    <h2>2. Login Ui Design || Animated Login form using Html and Css code || Login and Register form</h2>
+
+    <!-- YouTube Video -->
+    <div class="video-container">
+    <iframe width="740" height="415"
+          src="https://www.youtube.com/embed/QvdEC2012AU"  
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+    </iframe>
+    </div>
+
+    <!-- Source Codes -->
+    <section class="source-code">
+      <h3>HTML Code</h3>
+      <div class="code-box" id="htmlCode1">
+        <textarea readonly>
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+	<title>login page</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form action="">
+
+            <div class="form-group">
+                <input type="email" required>
+                <label for="">Email</label>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="form-group">
+                <input type="password" required>
+                <label for="">Password</label>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <p><Input type="checkbox">Remember Me <a href="#">Forget Password</a></p>
+            
+            <input id="btn" type="button" value="Login">
+
+            <p>Don't have a account? <a href="#">Register</a></p>
+
+        </form>
+    </div>
+<body>
+<html>
+-->
+        </textarea>
+      </div>
+
+      <h3>CSS Code</h3>
+      <div class="code-box" id="cssCode1">
+        <textarea readonly>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(bg.jpg)no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.container{
+    width: 400px;
+    height: 500px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-radius: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+h2{
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px 0;
+    font-size: 2em;
+}
+
+.form-group{
+    position: relative;
+    width: 330px;
+    border-bottom: 3px solid #fff;
+    margin: 30px 0;
+}
+
+.form-group input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2em;
+    color: #fff;
+    padding:0 30px 0 10px;
+}
+
+.form-group label{
+     position: absolute;
+     top: 50%;
+     left: 10px;
+     transform: translateY(-50%);
+     font-size: 1.2em;
+     color: #ddd;
+     transition: 0.5s;
+ }
+
+ input:focus ~ label,
+ input:valid ~ label {
+    top:-5px;
+ }
+
+ .form-group i{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1.2em;
+ }
+
+ p{
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+ }
+
+ p>a{
+    color: #fff;
+     text-decoration: none;
+     font-weight: 600;
+ }
+
+ p>a:hover{
+    text-decoration: underline;
+    font-style: italic;
+ }
+
+ #btn{
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: 0.5s;
+ }
+
+ #btn:hover{
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+ }
+
+
+ 
+        </textarea>
+      </div>
+    </section>
+  </main>
+  <!-- 2 vedio close -->
+
+  <!-- 0 vedio open -->
+  <main class="content">
+    <h2>0. xxxx xxxx xxxxxx x xxx x xx xxxxxxx   x xxxxxx  x xxxxxxxx</h2>
+
+    <!-- YouTube Video -->
+    <div class="video-container">
+    <iframe width="740" height="415"
+          src="https://www.youtube.com/embed/"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+    </iframe>
+    </div>
+
+    <!-- Source Codes -->
+    <section class="source-code">
+      <h3>HTML Code</h3>
+      <div class="code-box" id="htmlCode1">
+        <textarea readonly>
+
+        </textarea>
+      </div>
+
+      <h3>CSS Code</h3>
+      <div class="code-box" id="cssCode1">
+        <textarea readonly>
+
+        </textarea>
+      </div>
+
+      <h3>JavaScript Code</h3>
+      <div class="code-box" id="jsCode1">
+        <textarea readonly>
+          
+        </textarea>
+      </div>
+    </section>
+  </main>
+  <!-- 0 vedio close -->
+
+
+  <footer>
+    <p>© 2025 CodingMaster. Learn Share.</p>
+  </footer>
+
+
+</body>
+</html>
